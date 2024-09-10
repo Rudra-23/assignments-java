@@ -1,0 +1,9 @@
+com\example\hw3\controllers\TeacherController.class
+com\example\hw3\models\Teacher.class
+com\example\hw3\Application.class
+com\example\hw3\services\TeacherServiceInterface.class
+com\example\hw3\services\TeacherService.class
+com\example\hw3\models\Student.class
+com\example\hw3\services\StudentService.class
+com\example\hw3\controllers\StudentController.class
+com\example\hw3\services\StudentServiceInterface.class

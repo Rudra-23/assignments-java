@@ -1,0 +1,5 @@
+com\example\hw1\services\SearchService.class
+com\example\hw1\configs\AppConfig.class
+com\example\hw1\Homework1Application.class
+com\example\hw1\controllers\SearchController.class
+com\example\hw1\models\University.class
