@@ -1,5 +1,6 @@
 package com.example.hw3.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -16,7 +17,8 @@ public class Student {
     private String name;
 
     @ManyToMany(mappedBy = "students")
-    @JsonManagedReference // It was causing an infinite nesting in get request. Hence, I have to use this.
+    @JsonManagedReference
+    // It was causing an infinite nesting in get request. Hence, I have to use this.
     private List<Teacher> teachers = new ArrayList<>();
 
     public Long getId() {

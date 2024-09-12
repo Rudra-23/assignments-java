@@ -45,7 +45,7 @@ public class StudentService implements StudentServiceInterface {
         Root<Student> student = query.from(Student.class);
         Join<Student, Teacher> teacher = student.join("teachers");
 
-        int number = 10;
+        int number = 1;
         query.select(student).where(cb.gt(student.get("id"), number));
 
         return entityManager.createQuery(query).getResultList();

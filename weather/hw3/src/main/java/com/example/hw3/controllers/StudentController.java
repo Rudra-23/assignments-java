@@ -31,14 +31,10 @@ public class StudentController {
         return new ResponseEntity<>(studentService.saveStudent(student), HttpStatus.CREATED);
     }
 
-    public ResponseEntity<Student> getStudentFallback(Long id) {
-        return new ResponseEntity<>(null, HttpStatus.SERVICE_UNAVAILABLE);
-    }
-
     @GetMapping("/{id}")
-    @HystrixCommand(fallbackMethod = "getStudentFallback")
     public ResponseEntity<Student> getStudent(@PathVariable Long id) {
-        return ResponseEntity.ok(studentService.getStudent(id));
+        Student student = studentService.getStudent(id);
+        return ResponseEntity.ok(student);
     }
 
     @PostMapping("/{studentId}/teachers/{teacherId}")
